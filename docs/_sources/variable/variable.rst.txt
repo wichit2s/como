@@ -1,0 +1,131 @@
+.. _ch-variable:
+
+**************************************************
+ตัวแปร
+**************************************************
+
+คำสงวน
+==================================================
+
+.. code:: cpp
+
+   alignas, alignof, and, and_eq, asm,
+   auto, bitand, bitor, bool, break,
+   case, catch, char, char16_t, char32_t,
+   class, compl, const, constexpr, const_cast, 
+   continue, decltype, default, delete, do,
+   double, dynamic_cast, else, enum, explicit,
+   export, extern, false, float, for, friend,
+   goto, if, inline, int, long, mutable, 
+   namespace, new, noexcept, not, not_eq,
+   nullptr, operator, or, or_eq, private, 
+   protected, public, register, reinterpret_cast,
+   return, short, signed, sizeof, static,
+   static_assert, static_cast, struct, switch,
+   template, this, thread_local, throw, true, 
+   try, typedef, typeid, typename, union, unsigned, 
+   using, virtual, void, volatile, wchar_t, while, 
+   xor, xor_eq
+
+.. _se-data-type:
+
+ชนิดข้อมูลพื้นฐาน
+==================================================
+
++---------------------+--------------------------+--------+
+| Group               | Type                     | Remark |
++=====================+==========================+========+
+| Characters          | char                     |        |
+|                     | char16_t                 |        |
+|                     | char32_t                 |        |
+|                     | wchar_t                  |        |
++---------------------+--------------------------+--------+
+| Integers (signed)   | signed char              |        |
++                     +--------------------------+--------+
+|                     | *signed* short *int*     |        |
++                     +--------------------------+--------+
+|                     | *signed* int             |        |
++                     +--------------------------+--------+
+|                     | *signed* long *int*      |        |
++                     +--------------------------+--------+
+|                     | *signed* long long *int* |        |
++---------------------+--------------------------+--------+
+| Integers (unsigned) | unsigned char            |        |
+|                     | unsigned short *int*     |        |
+|                     | unsigned *int*           |        |
+|                     | unsigned long *int*      |        |
+|                     | unsigned long long *int* |        |
++---------------------+--------------------------+--------+
+| Floating-point      | float                    |        |
+|                     | double                   |        |
+|                     | long double              |        |
++---------------------+--------------------------+--------+
+| Boolean             | bool                     |        |
++---------------------+--------------------------+--------+
+| Void                | void                     |        |
++---------------------+--------------------------+--------+
+| Null pointer        | decltype(nullptr)        |        |
++---------------------+--------------------------+--------+
+
+ช่วงค่าข้อมูล
+==================================================
+
++----------+-----------------------------+----------------+
+| Bit Size | Unique representable values | Remark         |
++==========+=============================+================+
+| 8-bit    |                        256  | :math:`2^8`    |
++----------+-----------------------------+----------------+
+| 16-bit   |                     65,536  | :math:`2^{16}` |
++----------+-----------------------------+----------------+
+| 32-bit   |              4,294,967,296  | :math:`2^{32}` |
++----------+-----------------------------+----------------+
+| 64-bit   |  18,446,744,073,709,551,616 | :math:`2^{64}` |
++----------+-----------------------------+----------------+
+
+ตัวแปร
+==================================================
+
+.. code-block:: cpp
+
+    int a;
+    long long b;
+    float c;
+    double x, y, z;
+
+การกำหนดค่า
+==================================================
+
+.. code-block:: cpp
+
+    int x = 0;
+    long y (0);
+    double x {0.0};
+
+ประเภทข้อมูลอัตโนมัติ
+==================================================
+
+.. code-block:: cpp
+
+    int x = 0;
+    auto y = x;      // int y;
+    decltype(x) z;   // int z;
+
+ข้อความ
+==================================================
+
+การกำหนดค่า
+----------------------------------------
+
+.. code-block:: cpp
+
+    string name = "Paul Phoenix";
+    string paul ("Paul Phoenix");
+    string p {"Paul Phoenix"};
+
+ตัวอย่างโปรแกรม
+----------------------------------------
+
+.. literalinclude:: code/name.cpp
+   :linenos:
+   :language: cpp
+
