@@ -4,21 +4,23 @@
 คำสั่งทำซ้ำ
 ************************************************************
 
- `while`
+`while`
 ============================================================
 
 .. literalinclude:: code/while.cpp
    :linenos:
    :language: cpp
 
- `do-while`
+
+`do-while`
 ============================================================
 
 .. literalinclude:: code/dowhile.cpp
    :linenos:
    :language: cpp
 
- `for`
+
+`for`
 ============================================================
 
 .. literalinclude:: code/for.cpp

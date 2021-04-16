@@ -4,7 +4,7 @@
 คำสั่งเลือกทำ
 ************************************************************
 
- `if`
+`if`
 ============================================================
 
 .. literalinclude:: code/if.cpp
@@ -12,7 +12,7 @@
    :language: cpp
 
 
- `if-else`
+`if-else`
 ============================================================
 
 .. literalinclude:: code/ifelse.cpp
@@ -20,7 +20,7 @@
    :language: cpp
 
 
- `if - else if - else`
+`if - else if - else`
 ============================================================
 
 .. literalinclude:: code/ifelseifelse.cpp
@@ -28,7 +28,7 @@
    :language: cpp
 
 
- `switch`
+`switch`
 ============================================================
 
 .. literalinclude:: code/switch.cpp
