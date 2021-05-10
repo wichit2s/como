@@ -43,9 +43,9 @@
 <div class="section" id="id2">
 <h2>เทคนิค<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li><p>พิมพ์ให้เร็วขึ้น</p></li>
+<li><p>พิมพ์คำสั่งให้เร็วขึ้น</p></li>
 <li><p>บอกประเภทปัญหาอย่างไว</p></li>
-<li><p>วิเคราะห์ algorithms ที่จะใช้</p></li>
+<li><p>วิเคราะห์ algorithms ที่จะใช้ให้ได้</p></li>
 <li><p>เขียนคำสั่งให้เชี่ยว</p></li>
 <li><p>ทดสอบให้เซียน</p></li>
 <li><p>ฝึก ฝึก ฝึกทำโจทย์</p></li>
@@ -55,63 +55,100 @@
 <h2>ความซับซ้อน<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><blockquote>
-<div><p>อ้างอิงจาก <a class="footnote-reference brackets" href="#id8" id="id4">1</a> ตารางต่อไปนี้เปรียบเทียบขนาดข้อมูลและ algorithms ที่จะสามารถใช้ในการเขียนคำสั่งเพื่อให้ได้คะแนน</p>
+<div><p>ตารางต่อไปนี้เปรียบเทียบขนาดข้อมูลและ algorithms ที่จะสามารถใช้ในการเขียนคำสั่งเพื่อให้ได้คะแนน</p>
 </div></blockquote>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 18%" />
-<col style="width: 32%" />
-<col style="width: 50%" />
+<col style="width: 36%" />
+<col style="width: 64%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(n\)</span></p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(O\)</span> ที่รับได้</p></th>
-<th class="head"><p>ตัวอย่าง</p></th>
+<th class="head"><p>Big <span class="math notranslate nohighlight">\(O\)</span></p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\le 10\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(O(n!),O(n^6)\)</span></p></td>
-<td><p>permutation ของ <span class="math notranslate nohighlight">\(n\)</span></p></td>
 </tr>
 <tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\le 15\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(O(2^n \times n^2)\)</span></p></td>
-<td><p>TSP DP</p></td>
 </tr>
 <tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\le 18\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(O(2^n \times n)\)</span></p></td>
-<td><p>bitmask DP</p></td>
 </tr>
 <tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\le 100\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(O(n^4)\)</span></p></td>
-<td><p>3D DP + <span class="math notranslate nohighlight">\(O(n), C(n,4)\)</span></p></td>
 </tr>
 <tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\le 400\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(O(n^3)\)</span></p></td>
-<td></td>
 </tr>
 <tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\le 2K\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(O(n^2 log_2 n)\)</span></p></td>
-<td><p>2-nested loops + tree-based DP</p></td>
 </tr>
 <tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\le 10K\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(O(n^2)\)</span></p></td>
-<td><p>2-nested loops, bubble/selection/insertion sort</p></td>
 </tr>
 <tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\le 1M\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(O(n log_2 n)\)</span></p></td>
-<td><p>merge sort, segment tree</p></td>
 </tr>
 <tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\le 100M\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(O(n), O(log_2 n), O(1)\)</span></p></td>
-<td></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="id4">
+<h2>เทคนิคการแก้ปัญหา<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 64%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ระดับ</p></th>
+<th class="head"><p>Algorithms</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>ไม่ใช้เทคนิคอะไร</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>Brute-force Search</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>Divide and Conquer</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>Greedy</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>Dynamic Programming</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>Graph</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>Mathematics</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>Geometry</p></td>
 </tr>
 </tbody>
 </table>
 </div></blockquote>
 </div>
 <div class="section" id="id5">
-<h2>โจทย์ระดับ 1<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<h2>โจทย์ฝึกหัด<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id6">
+<h2>โจทย์ระดับ 1<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>UVa00272</p></li>
 <li><p>UVa01124</p></li>
@@ -130,8 +167,8 @@
 <li><p>UVa12577</p></li>
 </ul>
 </div>
-<div class="section" id="id6">
-<h2>โจทย์ระดับ 2<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id7">
+<h2>โจทย์ระดับ 2<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>UVa00621</p></li>
 <li><p>UVa10114</p></li>
@@ -150,8 +187,8 @@
 <li><p>UVa12554</p></li>
 </ul>
 </div>
-<div class="section" id="id7">
-<h2>โจทย์ระดับ 3<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id8">
+<h2>โจทย์ระดับ 3<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>UVa00119</p></li>
 <li><p>UVa00573</p></li>
@@ -168,11 +205,6 @@
 <li><p>UVa11956</p></li>
 <li><p>UVa12478</p></li>
 </ul>
-<dl class="footnote brackets">
-<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id4">1</a></span></dt>
-<dd><p>Halim, S., Halim, F., Skiena, S. S., &amp; Revilla, M. A. (2013). Competitive Programming 3. Lulu Independent Publish.</p>
-</dd>
-</dl>
 </div>
 </div>
 
