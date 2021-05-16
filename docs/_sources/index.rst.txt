@@ -20,6 +20,7 @@
    operator/operator
    inputoutput/inputoutput
    array/array
+   02_data_structure/data_structure
 
 ดรรชนีและตาราง
 ==================
