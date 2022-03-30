@@ -5,16 +5,15 @@
 <html lang="th">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>ตัวแปร &#8212; Com Olympiad  documentation</title>
-    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -36,31 +35,31 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="ch-variable">
+  <section id="ch-variable">
 <span id="id1"></span><h1>ตัวแปร<a class="headerlink" href="#ch-variable" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id2">
+<section id="id2">
 <h2>คำสงวน<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">alignas</span><span class="p">,</span> <span class="k">alignof</span><span class="p">,</span> <span class="n">and</span><span class="p">,</span> <span class="n">and_eq</span><span class="p">,</span> <span class="k">asm</span><span class="p">,</span>
-<span class="k">auto</span><span class="p">,</span> <span class="n">bitand</span><span class="p">,</span> <span class="n">bitor</span><span class="p">,</span> <span class="kt">bool</span><span class="p">,</span> <span class="k">break</span><span class="p">,</span>
-<span class="k">case</span><span class="p">,</span> <span class="k">catch</span><span class="p">,</span> <span class="kt">char</span><span class="p">,</span> <span class="kt">char16_t</span><span class="p">,</span> <span class="kt">char32_t</span><span class="p">,</span>
-<span class="n">class</span><span class="p">,</span> <span class="n">compl</span><span class="p">,</span> <span class="k">const</span><span class="p">,</span> <span class="k">constexpr</span><span class="p">,</span> <span class="k">const_cast</span><span class="p">,</span>
-<span class="k">continue</span><span class="p">,</span> <span class="k">decltype</span><span class="p">,</span> <span class="k">default</span><span class="p">,</span> <span class="k">delete</span><span class="p">,</span> <span class="k">do</span><span class="p">,</span>
-<span class="kt">double</span><span class="p">,</span> <span class="k">dynamic_cast</span><span class="p">,</span> <span class="k">else</span><span class="p">,</span> <span class="k">enum</span><span class="p">,</span> <span class="k">explicit</span><span class="p">,</span>
-<span class="k">export</span><span class="p">,</span> <span class="k">extern</span><span class="p">,</span> <span class="nb">false</span><span class="p">,</span> <span class="kt">float</span><span class="p">,</span> <span class="k">for</span><span class="p">,</span> <span class="k">friend</span><span class="p">,</span>
-<span class="k">goto</span><span class="p">,</span> <span class="k">if</span><span class="p">,</span> <span class="kr">inline</span><span class="p">,</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">long</span><span class="p">,</span> <span class="k">mutable</span><span class="p">,</span>
-<span class="k">namespace</span><span class="p">,</span> <span class="k">new</span><span class="p">,</span> <span class="k">noexcept</span><span class="p">,</span> <span class="n">not</span><span class="p">,</span> <span class="n">not_eq</span><span class="p">,</span>
-<span class="k">nullptr</span><span class="p">,</span> <span class="k">operator</span><span class="p">,</span> <span class="n">or</span><span class="p">,</span> <span class="n">or_eq</span><span class="p">,</span> <span class="k">private</span><span class="p">,</span>
-<span class="k">protected</span><span class="p">,</span> <span class="k">public</span><span class="p">,</span> <span class="k">register</span><span class="p">,</span> <span class="k">reinterpret_cast</span><span class="p">,</span>
-<span class="k">return</span><span class="p">,</span> <span class="kt">short</span><span class="p">,</span> <span class="kt">signed</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">,</span> <span class="k">static</span><span class="p">,</span>
-<span class="k">static_assert</span><span class="p">,</span> <span class="k">static_cast</span><span class="p">,</span> <span class="k">struct</span><span class="p">,</span> <span class="k">switch</span><span class="p">,</span>
-<span class="k">template</span><span class="p">,</span> <span class="k">this</span><span class="p">,</span> <span class="k">thread_local</span><span class="p">,</span> <span class="k">throw</span><span class="p">,</span> <span class="nb">true</span><span class="p">,</span>
-<span class="k">try</span><span class="p">,</span> <span class="k">typedef</span><span class="p">,</span> <span class="k">typeid</span><span class="p">,</span> <span class="k">typename</span><span class="p">,</span> <span class="k">union</span><span class="p">,</span> <span class="kt">unsigned</span><span class="p">,</span>
-<span class="k">using</span><span class="p">,</span> <span class="k">virtual</span><span class="p">,</span> <span class="kt">void</span><span class="p">,</span> <span class="k">volatile</span><span class="p">,</span> <span class="kt">wchar_t</span><span class="p">,</span> <span class="k">while</span><span class="p">,</span>
-<span class="n">xor</span><span class="p">,</span> <span class="n">xor_eq</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">alignas</span><span class="p">,</span><span class="w"> </span><span class="k">alignof</span><span class="p">,</span><span class="w"> </span><span class="n">and</span><span class="p">,</span><span class="w"> </span><span class="n">and_eq</span><span class="p">,</span><span class="w"> </span><span class="k">asm</span><span class="p">,</span><span class="w"></span>
+<span class="k">auto</span><span class="p">,</span><span class="w"> </span><span class="n">bitand</span><span class="p">,</span><span class="w"> </span><span class="n">bitor</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="p">,</span><span class="w"> </span><span class="k">break</span><span class="p">,</span><span class="w"></span>
+<span class="k">case</span><span class="p">,</span><span class="w"> </span><span class="k">catch</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="p">,</span><span class="w"> </span><span class="kt">char16_t</span><span class="p">,</span><span class="w"> </span><span class="kt">char32_t</span><span class="p">,</span><span class="w"></span>
+<span class="k">class</span><span class="p">,</span><span class="w"> </span><span class="n">compl</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="p">,</span><span class="w"> </span><span class="k">constexpr</span><span class="p">,</span><span class="w"> </span><span class="k">const_cast</span><span class="p">,</span><span class="w"></span>
+<span class="k">continue</span><span class="p">,</span><span class="w"> </span><span class="k">decltype</span><span class="p">,</span><span class="w"> </span><span class="k">default</span><span class="p">,</span><span class="w"> </span><span class="k">delete</span><span class="p">,</span><span class="w"> </span><span class="k">do</span><span class="p">,</span><span class="w"></span>
+<span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="k">dynamic_cast</span><span class="p">,</span><span class="w"> </span><span class="k">else</span><span class="p">,</span><span class="w"> </span><span class="k">enum</span><span class="p">,</span><span class="w"> </span><span class="k">explicit</span><span class="p">,</span><span class="w"></span>
+<span class="k">export</span><span class="p">,</span><span class="w"> </span><span class="k">extern</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="p">,</span><span class="w"> </span><span class="k">for</span><span class="p">,</span><span class="w"> </span><span class="k">friend</span><span class="p">,</span><span class="w"></span>
+<span class="k">goto</span><span class="p">,</span><span class="w"> </span><span class="k">if</span><span class="p">,</span><span class="w"> </span><span class="kr">inline</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="p">,</span><span class="w"> </span><span class="k">mutable</span><span class="p">,</span><span class="w"></span>
+<span class="k">namespace</span><span class="p">,</span><span class="w"> </span><span class="nn">new</span><span class="p">,</span><span class="w"> </span><span class="nn">noexcept</span><span class="p">,</span><span class="w"> </span><span class="nn">not</span><span class="p">,</span><span class="w"> </span><span class="nn">not_eq</span><span class="p">,</span><span class="w"></span>
+<span class="nn">nullptr</span><span class="p">,</span><span class="w"> </span><span class="nn">operator</span><span class="p">,</span><span class="w"> </span><span class="nn">or</span><span class="p">,</span><span class="w"> </span><span class="nn">or_eq</span><span class="p">,</span><span class="w"> </span><span class="nn">private</span><span class="p">,</span><span class="w"></span>
+<span class="nn">protected</span><span class="p">,</span><span class="w"> </span><span class="nn">public</span><span class="p">,</span><span class="w"> </span><span class="nn">register</span><span class="p">,</span><span class="w"> </span><span class="nn">reinterpret_cast</span><span class="p">,</span><span class="w"></span>
+<span class="nn">return</span><span class="p">,</span><span class="w"> </span><span class="nn">short</span><span class="p">,</span><span class="w"> </span><span class="nn">signed</span><span class="p">,</span><span class="w"> </span><span class="nn">sizeof</span><span class="p">,</span><span class="w"> </span><span class="nn">static</span><span class="p">,</span><span class="w"></span>
+<span class="nn">static_assert</span><span class="p">,</span><span class="w"> </span><span class="nn">static_cast</span><span class="p">,</span><span class="w"> </span><span class="nn">struct</span><span class="p">,</span><span class="w"> </span><span class="nn">switch</span><span class="p">,</span><span class="w"></span>
+<span class="nn">template</span><span class="p">,</span><span class="w"> </span><span class="nn">this</span><span class="p">,</span><span class="w"> </span><span class="nn">thread_local</span><span class="p">,</span><span class="w"> </span><span class="nn">throw</span><span class="p">,</span><span class="w"> </span><span class="nn">true</span><span class="p">,</span><span class="w"></span>
+<span class="nn">try</span><span class="p">,</span><span class="w"> </span><span class="nn">typedef</span><span class="p">,</span><span class="w"> </span><span class="nn">typeid</span><span class="p">,</span><span class="w"> </span><span class="nn">typename</span><span class="p">,</span><span class="w"> </span><span class="nn">union</span><span class="p">,</span><span class="w"> </span><span class="nn">unsigned</span><span class="p">,</span><span class="w"></span>
+<span class="nn">using</span><span class="p">,</span><span class="w"> </span><span class="nn">virtual</span><span class="p">,</span><span class="w"> </span><span class="nn">void</span><span class="p">,</span><span class="w"> </span><span class="nn">volatile</span><span class="p">,</span><span class="w"> </span><span class="nn">wchar_t</span><span class="p">,</span><span class="w"> </span><span class="nn">while</span><span class="p">,</span><span class="w"></span>
+<span class="nn">xor</span><span class="p">,</span><span class="w"> </span><span class="nn">xor_eq</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="se-data-type">
+</section>
+<section id="se-data-type">
 <span id="id3"></span><h2>ชนิดข้อมูลพื้นฐาน<a class="headerlink" href="#se-data-type" title="Permalink to this headline">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
@@ -144,104 +143,175 @@
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="id4">
+</section>
+<section id="id4">
 <h2>ช่วงค่าข้อมูล<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 18%" />
-<col style="width: 53%" />
-<col style="width: 29%" />
+<col style="width: 19%" />
+<col style="width: 10%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+<col style="width: 11%" />
+<col style="width: 7%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>Bit Size</p></th>
-<th class="head"><p>Unique representable values</p></th>
+<tr class="row-odd"><th class="head"><p>Type</p></th>
+<th class="head"><p>Macro</p></th>
+<th class="head"><p>Min Value</p></th>
+<th class="head"><p>Max Value</p></th>
+<th class="head"><p>Macro</p></th>
 <th class="head"><p>Remark</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>8-bit</p></td>
+<tr class="row-even"><td><p><cite>char</cite></p></td>
+<td><p>CHAR_MIN</p></td>
+<td><p>-128</p></td>
+<td><p>127</p></td>
+<td><p>CHAR_MAX</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>short char</p></td>
+<td><p>SCHAR_MIN</p></td>
+<td><p>-128</p></td>
+<td><p>127</p></td>
+<td><p>SCHAR_MAX</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>unsigned char</p></td>
+<td></td>
+<td><p>0</p></td>
 <td><p>256</p></td>
-<td><p><span class="math notranslate nohighlight">\(2^8\)</span></p></td>
+<td><p>UCHAR_MAX</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><p>16-bit</p></td>
-<td><p>65,536</p></td>
-<td><p><span class="math notranslate nohighlight">\(2^{16}\)</span></p></td>
+<tr class="row-odd"><td><p><cite>short</cite></p></td>
+<td><p>SHRT_MIN</p></td>
+<td><p>-32,768</p></td>
+<td><p>32,767</p></td>
+<td><p>SHRT_MAX</p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><p>32-bit</p></td>
-<td><p>4,294,967,296</p></td>
-<td><p><span class="math notranslate nohighlight">\(2^{32}\)</span></p></td>
+<tr class="row-even"><td><p>unsigned short int</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>65,535</p></td>
+<td><p>USHRT_MAX</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><p>64-bit</p></td>
-<td><p>18,446,744,073,709,551,616</p></td>
-<td><p><span class="math notranslate nohighlight">\(2^{64}\)</span></p></td>
+<tr class="row-odd"><td><p><cite>int</cite></p></td>
+<td><p>INT_MIN</p></td>
+<td><p>-2,147,483,648</p></td>
+<td><p>2,147,483,647</p></td>
+<td><p>INT_MAX</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>unsigned int</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>4,294,967,295</p></td>
+<td><p>UINT_MAX</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><cite>long</cite></p></td>
+<td><p>LONG_MIN</p></td>
+<td><p>-9,223,372,036,854,775,807</p></td>
+<td><p>9,223,372,036,854,775,807</p></td>
+<td><p>LONG_MAX</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>unsigned long</p></td>
+<td><p>ULONG_MIN</p></td>
+<td><p>0</p></td>
+<td><p>18,446,744,073,709,551,615</p></td>
+<td><p>ULONG_MAX</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><cite>long long</cite></p></td>
+<td><p>LLONG_MIN</p></td>
+<td><p>-9,223,372,036,854,775,807</p></td>
+<td><p>9,223,372,036,854,775,807</p></td>
+<td><p>LLONG_MAX</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>unsigned long long</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>18,446,744,073,709,551,615</p></td>
+<td><p>ULLONG_MAX</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><cite>float</cite></p></td>
+<td><p>FLT_MIN</p></td>
+<td><p>1.17549E-38</p></td>
+<td><p>3.40282E+38</p></td>
+<td><p>FLT_MAX</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><cite>double</cite></p></td>
+<td><p>DBL_MIN</p></td>
+<td><p>2.22507E-308</p></td>
+<td><p>1.79769E+308</p></td>
+<td><p>DBL_MAX</p></td>
+<td></td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="id5">
+</section>
+<section id="id5">
 <h2>ตัวแปร<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
-<span class="kt">long</span> <span class="kt">long</span> <span class="n">b</span><span class="p">;</span>
-<span class="kt">float</span> <span class="n">c</span><span class="p">;</span>
-<span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"></span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"></span>
+<span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id6">
+</section>
+<section id="id6">
 <h2>การกำหนดค่า<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="kt">long</span> <span class="nf">y</span> <span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-<span class="kt">double</span> <span class="n">x</span> <span class="p">{</span><span class="mf">0.0</span><span class="p">};</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="kt">long</span><span class="w"> </span><span class="nf">y</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">{</span><span class="mf">0.0</span><span class="p">};</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id7">
+</section>
+<section id="id7">
 <h2>ประเภทข้อมูลอัตโนมัติ<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="k">auto</span> <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>      <span class="c1">// int y;</span>
-<span class="k">decltype</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="n">z</span><span class="p">;</span>   <span class="c1">// int z;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">      </span><span class="c1">// int y;</span>
+<span class="k">decltype</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="n">z</span><span class="p">;</span><span class="w">   </span><span class="c1">// int z;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id8">
+</section>
+<section id="id8">
 <h2>ข้อความ<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id9">
+<section id="id9">
 <h3>การกำหนดค่า<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">string</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;Paul Phoenix&quot;</span><span class="p">;</span>
-<span class="n">string</span> <span class="nf">paul</span> <span class="p">(</span><span class="s">&quot;Paul Phoenix&quot;</span><span class="p">);</span>
-<span class="n">string</span> <span class="n">p</span> <span class="p">{</span><span class="s">&quot;Paul Phoenix&quot;</span><span class="p">};</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Paul Phoenix&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="n">string</span><span class="w"> </span><span class="nf">paul</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;Paul Phoenix&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">string</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;Paul Phoenix&quot;</span><span class="p">};</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id10">
+</section>
+<section id="id10">
 <h3>ตัวอย่างโปรแกรม<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp"></span>
-
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-  <span class="n">string</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;Paul Phoenix&quot;</span><span class="p">;</span>
-
-  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">name</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-
- <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">  </span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Paul Phoenix&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">11</span><span class="p">}</span><span class="w"></span>
 </pre></div>
-</td></tr></table></div>
 </div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
           </div>
@@ -260,7 +330,7 @@
 
 
 <h3>Navigation</h3>
-<p class="caption"><span class="caption-text">เนื้อหา:</span></p>
+<p class="caption" role="heading"><span class="caption-text">เนื้อหา:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../basic/basic.html">ความรู้พื้นฐาน</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">ตัวแปร</a><ul>
@@ -277,6 +347,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../operator/operator.html">เครื่องหมาย</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../inputoutput/inputoutput.html">การอ่านข้อมูลและแสดงผล</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../array/array.html">อาเรย์ 1 มิติ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../array/array2.html">อาเรย์ 2 มิติ</a></li>
 </ul>
 
 <div class="relations">
@@ -292,7 +363,7 @@
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -314,7 +385,7 @@
       &copy;2020, wichit2s.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.2.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
